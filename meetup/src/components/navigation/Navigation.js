@@ -5,6 +5,7 @@ import './Navigation.css'
 const Navigation = () => {
   return (
     <header className='main-header'>
+      <div className='logo'>React Meetups</div>
       <nav>
         <ul>
           <li>

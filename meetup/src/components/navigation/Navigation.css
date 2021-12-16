@@ -20,6 +20,7 @@
   padding: 0;
   display: flex;
   align-items: baseline;
+  justify-content: center;
 }
 
 .main-header li {
@@ -36,4 +37,18 @@
 .main-header a:active,
 .main-header a.active {
   color: rebeccapurple;
+}
+
+.badge {
+  background-color: #cc2062;
+  color: white;
+  border-radius: 12px;
+  padding: 0 1rem;
+  margin-left: 0.5rem;
+}
+
+.logo {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
 }
