@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './NewMeetupForm.css'
 import Card from '../card/Card'
 
-const NewMeetupForm = () => {
+const NewMeetupForm = ({ onAddMeetup }) => {
 
   const [enteredTitle, setEnteredTitle] = useState('')
   const [enteredImage, setEnteredImage] = useState('')
@@ -36,7 +36,8 @@ const NewMeetupForm = () => {
     description: enteredDescription
   }
 
-  console.log(meetupData)
+  onAddMeetup(meetupData)
+
 
   return (
     <Card>
