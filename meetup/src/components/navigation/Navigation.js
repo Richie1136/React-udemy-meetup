@@ -12,7 +12,7 @@ const Navigation = () => {
             <NavLink to='/'>All Meetups</NavLink>
           </li>
           <li>
-            <NavLink to='/newmeetups'>New Meetups</NavLink>
+            <NavLink to='/addmeetup'>Add Meetup</NavLink>
           </li>
           <li>
             <NavLink to='/favorites'>Favorites</NavLink>

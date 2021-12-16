@@ -1,10 +1,12 @@
 import React from 'react'
+import NewMeetupForm from '../components/newmeetupform/NewMeetupForm'
 
 const NewMeetupsPage = () => {
   return (
-    <div>
-      New Meetups
-    </div>
+    <section>
+      <h1>Add New Meetup</h1>
+      <NewMeetupForm />
+    </section>
   )
 }
 
