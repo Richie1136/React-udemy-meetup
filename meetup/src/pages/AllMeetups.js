@@ -3,28 +3,39 @@ import React from 'react'
 const DUMMY_DATA = [
   {
     id: 'm1',
-    title: 'This is a first meetup',
-    image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',
-    address: 'Meetupstreet 5, 12345 Meetup City',
-    description:
-      'This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!',
+    title: 'A first meetup',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Zion_Williamson_2020.jpg/800px-Zion_Williamson_2020.jpg',
+    address: 'Some address 5, 32456',
+    description: 'This the first'
   },
   {
     id: 'm2',
-    title: 'This is a second meetup',
-    image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',
-    address: 'Meetupstreet 5, 12345 Meetup City',
-    description:
-      'This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!',
+    title: 'A second meetup',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/c/cc/Jonathan_Taylor.png',
+    address: 'Some address 15, 32456',
+    description: 'This the second'
   },
+  {
+    id: 'm3',
+    title: 'A third meetup',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Aaron_Judge_2018.jpg/1920px-Aaron_Judge_2018.jpg',
+    address: 'The address 15, 32456',
+    description: 'This the third'
+  }
 ]
 
 const AllMeetupsPage = () => {
   return (
     <div>
-      All Meetups
+      <h1>All Meetups</h1>
+      {DUMMY_DATA.map((data => {
+        return (
+          <>
+            <h2>{data.title}</h2>
+            <img src={data.image} />
+          </>
+        )
+      }))}
     </div>
   )
 }
