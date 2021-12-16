@@ -5,9 +5,9 @@ import Card from '../card/Card'
 const NewMeetupForm = () => {
 
   const [enteredTitle, setEnteredTitle] = useState('')
+  const [enteredImage, setEnteredImage] = useState('')
   const [enteredAddress, setEnteredAddress] = useState('')
   const [enteredDescription, setEnteredDescription] = useState('')
-  const [enteredImage, setEnteredImage] = useState('')
 
 
   const handleTitleInput = (event) => {
@@ -29,20 +29,29 @@ const NewMeetupForm = () => {
     event.preventDefault()
   }
 
+  const meetupData = {
+    title: enteredTitle,
+    image: enteredImage,
+    address: enteredAddress,
+    description: enteredDescription
+  }
+
+  console.log(meetupData)
+
   return (
     <Card>
       <form onSubmit={handleSubmit} className='form'>
         <div className='control'>
           <label htmlFor='title'>Meetup Title</label>
-          <input type='text' required id="title" value={enteredTitle} onChange={handleTitleInput} />
-        </div>
-        <div className='control'>
-          <label htmlFor='address'>Meetup Address</label>
-          <input type='text' required id="address" value={enteredAddress} onChange={handleAddressInput} />
+          <input type='text' required id="title" onChange={handleTitleInput} />
         </div>
         <div className='control'>
           <label htmlFor='image'>Meetup Image</label>
           <input type='url' required id="image" value={enteredImage} onChange={handleImageInput} />
+        </div>
+        <div className='control'>
+          <label htmlFor='address'>Meetup Address</label>
+          <input type='text' required id="address" value={enteredAddress} onChange={handleAddressInput} />
         </div>
         <div className='control'>
           <label htmlFor='description'>Meetup Description</label>
