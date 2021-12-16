@@ -32,7 +32,7 @@ const AllMeetupsPage = () => {
         return (
           <>
             <h2>{data.title}</h2>
-            <img src={data.image} />
+            <img src={data.image} alt='image' />
           </>
         )
       }))}
