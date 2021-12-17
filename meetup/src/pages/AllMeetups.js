@@ -7,11 +7,20 @@ const AllMeetupsPage = () => {
   const [loadedMeetups, setLoadedMeetups] = useState([])
 
   useEffect(() => {
+    setIsLoading(true)
     fetch('https://react-meetups-175c9-default-rtdb.firebaseio.com/meetups.json')
       .then(res => res.json())
       .then(data => {
+        const meetups = []
+        for (let key in data) {
+          const meetup = {
+            id: key,
+            ...data[key]
+          }
+          meetups.push(meetup)
+        }
         setIsLoading(false)
-        setLoadedMeetups(data)
+        setLoadedMeetups(meetups)
       })
   }, [])
 
