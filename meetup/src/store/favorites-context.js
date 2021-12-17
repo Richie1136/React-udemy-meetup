@@ -27,7 +27,10 @@ export const FavoritesContextProvider = ({ children }) => {
 
   const context = {
     favorites: userFavorites,
-    totalFavorites: userFavorites.length
+    totalFavorites: userFavorites.length,
+    addFavorite: handleAddFavorite,
+    removeFavorite: handleRemoveFavorite,
+    isItemFavorite: itemIsFavorite
   }
   return (
     <FavoritesContext.Provider value={context}>
