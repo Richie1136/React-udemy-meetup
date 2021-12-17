@@ -3,17 +3,17 @@ import MeetupList from '../components/meetuplist/MeetupList'
 
 
 const AllMeetupsPage = () => {
-  const [loading, setLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
   const [loadedMeetups, setLoadedMeetups] = useState([])
 
   fetch('https://react-meetups-175c9-default-rtdb.firebaseio.com/meetups.json')
     .then(res => res.json())
     .then(data => {
-      setLoading(false)
+      setIsLoading(false)
       setLoadedMeetups(data)
     })
 
-  if (loading) {
+  if (isLoading) {
     return <p>Loading...</p>
   }
 
