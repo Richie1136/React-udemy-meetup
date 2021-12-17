@@ -1,11 +1,15 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 
-const Favoritescontext = () => {
+const FavoritesContext = createContext({
+  favorites: [],
+  totalFavorites: 0
+})
+export const FavoritesContextProvider = ({ children }) => {
   return (
-    <div>
-
-    </div>
+    <FavoritesContext.Provider>
+      {children}
+    </FavoritesContext.Provider>
   )
 }
 
-export default Favoritescontext
+export default FavoritesContext
