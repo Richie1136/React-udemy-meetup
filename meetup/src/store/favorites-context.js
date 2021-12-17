@@ -14,7 +14,10 @@ export const FavoritesContextProvider = ({ children }) => {
     })
   }
 
-  const handleRemoveFavorite = () => {
+  const handleRemoveFavorite = (meetupId) => {
+    setUserFavorites(prevUserFavorites => {
+      return prevUserFavorites.filter(meetup => meetup.id !== meetupId)
+    })
 
   }
 
