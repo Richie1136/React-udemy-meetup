@@ -21,8 +21,8 @@ export const FavoritesContextProvider = ({ children }) => {
 
   }
 
-  const itemIsFavorite = () => {
-
+  const itemIsFavorite = (meetupId) => {
+    return userFavorites.some(meetup => meetup.id === meetupId)
   }
 
   const context = {
