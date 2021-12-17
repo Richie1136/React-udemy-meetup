@@ -32,7 +32,7 @@ const MeetupItem = ({ title, image, address, description, id }) => {
             <p>{description}</p>
           </div>
           <div className='actions'>
-            {<button onClick={toggleFavoriteStatus}>To Favorites</button>}
+            <button onClick={toggleFavoriteStatus}>To Favorites</button>
           </div>
         </Card>
       </li>
