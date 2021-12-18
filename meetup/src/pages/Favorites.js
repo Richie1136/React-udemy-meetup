@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import FavoritesContext from '../store/favorites-context'
+import MeetupList from '../components/meetuplist/MeetupList'
+
 
 const FavoritesPage = () => {
+  const context = useContext(FavoritesContext)
   return (
     <div>
-      Favorites
+      <h1>My Favorites</h1>
+      <MeetupList meetups={context.favorites} />
     </div>
   )
 }
