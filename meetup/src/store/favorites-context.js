@@ -21,7 +21,6 @@ export const FavoritesContextProvider = ({ children }) => {
     setUserFavorites(prevUserFavorites => {
       return prevUserFavorites.filter(meetup => meetup.id !== meetupId)
     })
-
   }
 
   const itemIsFavorite = (meetupId) => {
